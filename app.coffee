@@ -167,7 +167,7 @@ app.post '/list-rule', (req , res) ->
 
 app.post '/count' , (req , res) ->
 	query = JSON.parse req.body.query
-	#console.dir(query)
+	console.dir(query)
 	db.collection(collection_user).count query, (error, result) ->
 		if error
 			return res.send(error)
